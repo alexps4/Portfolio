@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Alessio Giordano</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; background: #f0f2f5; color: #333; display: flex; transition: all 0.3s ease; }
+
+    /* Sidebar */
+    nav {
+        width: 260px;
+        background: #1e1f28;
+        color: #fff;
+        height: 100vh;
+        position: fixed;
+        padding-top: 2rem;
+        transition: all 0.3s ease;
+    }
+    nav h2 { text-align: center; margin-bottom: 2rem; font-size: 1.6rem; color: #6dd5fa; }
+    nav ul { list-style: none; padding-left: 0; }
+    nav ul li { padding: 1rem 2rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; border-radius: 10px; transition: 0.3s ease; margin-bottom: 0.5rem;}
+    nav ul li:hover { background: linear-gradient(135deg, #2980b9, #6dd5fa); }
+    nav ul li a { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+
+    /* Main content */
+    main { margin-left: 260px; padding: 2rem; flex: 1; }
+    section { margin-bottom: 2rem; padding: 2rem; border-radius: 15px; background: linear-gradient(135deg, #ffffff, #e0e6f8); box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    section:hover { transform: translateY(-5px); }
+    section h2 { color: #1e1f28; border-bottom: 3px solid #6dd5fa; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+
+    /* Certificazioni card */
+    .cert-card { padding: 1rem; margin-bottom: 1rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); background: linear-gradient(120deg, #dff3ff, #ffffff); transition: transform 0.3s ease, box-shadow 0.3s ease;}
+    .cert-card a { color: #2980b9; text-decoration: none; font-weight: bold; }
+    .cert-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
+
+    /* Progress bar */
+    .progress-bar { background: #ecf0f1; border-radius: 20px; overflow: hidden; margin-bottom: 1rem; height: 25px; }
+    .progress { background: linear-gradient(90deg, #2980b9, #6dd5fa); color: #fff; padding: 0.3rem 0; text-align: center; font-weight: bold; width: 0; border-radius: 20px; transition: width 1s ease; }
+
+    /* Skills pills */
+    .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill { color: #fff; padding: 0.5rem 1rem; border-radius: 25px; font-weight: bold; cursor: default; transition: transform 0.3s ease; }
+    .skill:hover { transform: scale(1.1); }
+    .skill-red { background: #e74c3c; }
+    .skill-blue { background: #2980b9; }
+    .skill-green { background: #27ae60; }
+    .skill-purple { background: #8e44ad; }
+
+    /* Footer */
+    footer { text-align: center; padding: 1rem 0; background: #1e1f28; color: #fff; margin-top: 2rem; border-radius: 0 0 15px 15px; }
+    footer a { color: #fff; margin: 0 0.5rem; text-decoration: none; font-size: 1.3rem; transition: color 0.3s ease; }
+    footer a:hover { color: #6dd5fa; }
+
+</style>
+</head>
+<body>
+
+<nav>
+    <h2>Alessio Giordano</h2>
+    <ul>
+        <li><a href="#certificazioni"><i class="fas fa-certificate"></i> Certificazioni</a></li>
+        <li><a href="#progressi"><i class="fas fa-chart-line"></i> Progressi</a></li>
+        <li><a href="#competenze"><i class="fas fa-tools"></i> Competenze</a></li>
+        <li><a href="#contatti"><i class="fas fa-envelope"></i> Contatti</a></li>
+    </ul>
+</nav>
+
+<main>
+<section id="certificazioni">
+    <h2>Certificazioni</h2>
+    <div class="cert-card">
+        <strong>CompTIA Security+</strong> – Conseguimento: 09 Marzo 2024 | Scadenza: 09 Marzo 2027  
+        <br>Badge ufficiale: <a href="https://www.credly.com/earner/earned/badge/4aab7b54-ca44-4b95-aa6c-668e2c85dbc7" target="_blank">Visualizza badge</a>
+    </div>
+    <div class="cert-card">
+        <strong>RangeForce Platform</strong> – 63 moduli completati (25 ore e 10 minuti)  
+        <br>Certificato PDF: <a href="https://github.com/alexps4/Portfolio/blob/main/Rangeforce.pdf" target="_blank">Visualizza certificato</a>
+    </div>
+    <div class="cert-card">
+        <strong>TIROCINIO IN SICUREZZA INFORMATICA REMOTA MRCI - MCSI MOSSÉ CYBER SECURITY INSTITUTE</strong>  
+        <br>Dettagli: <a href="https://students.mosse-institute.com/student/I7IjehUwZAcMz7JJhs0ZURMiRQ72" target="_blank">Visualizza certificato</a>
+    </div>
+    <div class="cert-card">
+        <strong>Badge Cisco:</strong>
+        <ul>
+            <li><a href="https://www.credly.com/badges/78b2e896-812d-44a1-ac80-b45cf179d3e3" target="_blank">CYBER THREAT MANAGEMENT</a></li>
+            <li><a href="https://www.credly.com/badges/bc7ec4f1-9ce9-4fe2-ad5c-ad76aaadb784" target="_blank">INTRODUCTION TO INTERNET OF THINGS</a></li>
+            <li><a href="https://www.credly.com/earner/earned/badge/d7fb63a9-d085-48d8-93e5-76b18edac357" target="_blank">NETWORKING BASICS</a></li>
+            <li><a href="https://www.credly.com/badges/4046eb59-61b9-442a-bb65-7f6b4179322c" target="_blank">NETWORKING DEVICES AND INITIAL CONFIGURATION</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="progressi">
+    <h2>Progressi RangeForce</h2>
+    <div class="progress-bar"><div class="progress" style="width:100%">63 moduli completati (100%)</div></div>
+    <div class="progress-bar"><div class="progress" style="width:40%">Threat Hunting (40%)</div></div>
+    <div class="progress-bar"><div class="progress" style="width:50%">Malware Analysis (50%)</div></div>
+    <div class="progress-bar"><div class="progress" style="width:60%">Incident Response (60%)</div></div>
+</section>
+
+<section id="competenze">
+    <h2>Competenze principali</h2>
+    <div class="skills">
+        <div class="skill skill-red" title="Esperienza pratica con Red Teaming">Red Teaming</div>
+        <div class="skill skill-blue" title="Esperienza pratica in Penetration Testing">Penetration Testing</div>
+        <div class="skill skill-green" title="Threat Hunting su reti e sistemi">Threat Hunting</div>
+        <div class="skill skill-red" title="Analisi malware con strumenti professionali">Malware Analysis</div>
+        <div class="skill skill-purple" title="Incident Response su sistemi e reti">Incident Response</div>
+        <div class="skill skill-blue" title="Uso di Metasploit">Metasploit</div>
+        <div class="skill skill-green" title="Analisi malware con YARA">YARA</div>
+        <div class="skill skill-purple" title="Programmazione in Python">Python</div>
+        <div class="skill skill-blue" title="Reverse engineering con Ghidra / Cutter">Ghidra / Cutter</div>
+        <div class="skill skill-green" title="Sicurezza Cloud">Cloud Security</div>
+    </div>
+</section>
+
+<section id="contatti">
+    <h2>Contatti</h2>
+    <p>Email: <strong><a href="mailto:alexjuve2930@gmail.com">alexjuve2930@gmail.com</a></strong></p>
+    <p>Cellulare: <strong>3291989053</strong></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/alessio-giordano-060064247/" target="_blank">alessio-giordano</a></p>
+    <p>YouTube: <a href="https://www.youtube.com/channel/UCvQjOX6gJFbibRtuW8nW4zQ" target="_blank">THE NEXT LEVEL / ALEXJ30</a></p>
+</section>
+
+<footer>
+    &copy; 2025 Alessio Giordano – Tutti i diritti riservati  
+    <br>
+    <a href="https://www.linkedin.com/in/alessio-giordano-060064247/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:alexjuve2930@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.youtube.com/channel/UCvQjOX6gJFbibRtuW8nW4zQ" target="_blank"><i class="fab fa-youtube"></i></a>
+</footer>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const bars = document.querySelectorAll('.progress');
+        bars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => { bar.style.width = width; }, 300);
+        });
+    });
+</script>
+
+</main>
+</body>
+</html>
