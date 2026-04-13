@@ -3,148 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio Alessio Giordano</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Alessio Giordano | SOC Analyst</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background: #f0f2f5; color: #333; display: flex; transition: all 0.3s ease; }
+body {margin:0;font-family:'Segoe UI',sans-serif;background:#020617;color:#e2e8f0;}
+header {text-align:center;padding:100px 20px;background:#020617;}
 
-    /* Sidebar */
-    nav {
-        width: 260px;
-        background: #1e1f28;
-        color: #fff;
-        height: 100vh;
-        position: fixed;
-        padding-top: 2rem;
-        transition: all 0.3s ease;
-    }
-    nav h2 { text-align: center; margin-bottom: 2rem; font-size: 1.6rem; color: #6dd5fa; }
-    nav ul { list-style: none; padding-left: 0; }
-    nav ul li { padding: 1rem 2rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; border-radius: 10px; transition: 0.3s ease; margin-bottom: 0.5rem;}
-    nav ul li:hover { background: linear-gradient(135deg, #2980b9, #6dd5fa); }
-    nav ul li a { color: #fff; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+.typing {
+  font-size: 18px;
+  color: #22c55e;
+  border-right: 2px solid #22c55e;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(40, end), blink .8s infinite;
+}
 
-    /* Main content */
-    main { margin-left: 260px; padding: 2rem; flex: 1; }
-    section { margin-bottom: 2rem; padding: 2rem; border-radius: 15px; background: linear-gradient(135deg, #ffffff, #e0e6f8); box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
-    section:hover { transform: translateY(-5px); }
-    section h2 { color: #1e1f28; border-bottom: 3px solid #6dd5fa; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { 50% { border-color: transparent } }
 
-    /* Certificazioni card */
-    .cert-card { padding: 1rem; margin-bottom: 1rem; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); background: linear-gradient(120deg, #dff3ff, #ffffff); transition: transform 0.3s ease, box-shadow 0.3s ease;}
-    .cert-card a { color: #2980b9; text-decoration: none; font-weight: bold; }
-    .cert-card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.2); }
-
-    /* Progress bar */
-    .progress-bar { background: #ecf0f1; border-radius: 20px; overflow: hidden; margin-bottom: 1rem; height: 25px; }
-    .progress { background: linear-gradient(90deg, #2980b9, #6dd5fa); color: #fff; padding: 0.3rem 0; text-align: center; font-weight: bold; width: 0; border-radius: 20px; transition: width 1s ease; }
-
-    /* Skills pills */
-    .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .skill { color: #fff; padding: 0.5rem 1rem; border-radius: 25px; font-weight: bold; cursor: default; transition: transform 0.3s ease; }
-    .skill:hover { transform: scale(1.1); }
-    .skill-red { background: #e74c3c; }
-    .skill-blue { background: #2980b9; }
-    .skill-green { background: #27ae60; }
-    .skill-purple { background: #8e44ad; }
-
-    /* Footer */
-    footer { text-align: center; padding: 1rem 0; background: #1e1f28; color: #fff; margin-top: 2rem; border-radius: 0 0 15px 15px; }
-    footer a { color: #fff; margin: 0 0.5rem; text-decoration: none; font-size: 1.3rem; transition: color 0.3s ease; }
-    footer a:hover { color: #6dd5fa; }
-
+header h1{font-size:46px;margin-bottom:10px;}
+.btn{display:inline-block;margin-top:25px;padding:12px 25px;background:#22c55e;color:white;border-radius:8px;text-decoration:none;}
+.container{max-width:1100px;margin:auto;padding:40px 20px;}
+.section-title{font-size:26px;margin-bottom:20px;border-left:4px solid #22c55e;padding-left:10px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.card{background:#0f172a;padding:20px;border-radius:12px;transition:0.3s;border:1px solid #334155;position:relative;}
+.card:hover{transform:translateY(-6px);box-shadow:0 0 15px rgba(34,197,94,0.4);} 
+.card a{display:inline-block;margin-top:10px;color:#22c55e;text-decoration:none;font-size:14px;}
+.badge{display:inline-block;background:#22c55e;padding:6px 10px;border-radius:6px;margin:4px;font-size:13px;}
+.timeline{border-left:2px solid #22c55e;padding-left:20px;}
+.timeline-item{margin-bottom:20px;}
+.lab{background:#0f172a;padding:20px;border-radius:12px;border:1px solid #334155;}
+footer{text-align:center;padding:20px;background:#020617;margin-top:40px;}
 </style>
 </head>
+
 <body>
 
-<nav>
-    <h2>Alessio Giordano</h2>
-    <ul>
-        <li><a href="#certificazioni"><i class="fas fa-certificate"></i> Certificazioni</a></li>
-        <li><a href="#progressi"><i class="fas fa-chart-line"></i> Progressi</a></li>
-        <li><a href="#competenze"><i class="fas fa-tools"></i> Competenze</a></li>
-        <li><a href="#contatti"><i class="fas fa-envelope"></i> Contatti</a></li>
-    </ul>
-</nav>
+<header>
+    <h1>Alessio Giordano</h1>
+    <div class="typing">Monitoring threats... Detecting attacks... Responding in real-time...</div>
+    <br>
+    <a class="btn" href="#projects">View Projects</a>
+</header>
 
-<main>
-<section id="certificazioni">
-    <h2>Certificazioni</h2>
-    <div class="cert-card">
-        <strong>CompTIA Security+</strong> – Conseguimento: 09 Marzo 2024 | Scadenza: 09 Marzo 2027  
-        <br>Badge ufficiale: <a href="https://www.credly.com/earner/earned/badge/4aab7b54-ca44-4b95-aa6c-668e2c85dbc7" target="_blank">Visualizza badge</a>
+<div class="container">
+
+    <!-- INTRO PROFESSIONALE -->
+    <h2 class="section-title">👨‍💻 Chi Sono</h2>
+    <p>
+        Junior SOC Analyst con certificazione <strong>CompTIA Security+</strong> ed esperienza pratica maturata tramite 
+        tirocinio presso il <strong>Mossé Cyber Security Institute</strong> e 63 moduli completati sulla piattaforma 
+        <strong>RangeForce</strong>. Mi occupo di analisi log, threat hunting, investigazione alert e attività di 
+        incident response di primo livello. Motivato a crescere in un team SOC e contribuire alla difesa delle infrastrutture.
+    </p>
+
+    <!-- CERTIFICAZIONI -->
+    <h2 class="section-title">📜 Certificazioni</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3>CompTIA Security+</h3>
+            <p>Certificazione ufficiale valida fino al 2027.</p>
+            <a href="https://github.com/alexps4/Portfolio/blob/main/CompTIA%20Security+%20ce%20certificate.pdf?raw=1" target="_blank">🔗 View Certificate</a>
+            <p style="font-size:12px;opacity:0.7;">Codice: N7NWETKRLBREQXKT</p>
+        </div>
+
+        <div class="card">
+            <h3>Mossé Cyber Security Institute</h3>
+            <p>Remote Cybersecurity Internship – Portfolio pubblico.</p>
+            <a href="https://github.com/alexps4/Portfolio/blob/main/I7IjehUwZAcMz7JJhs0ZURMiRQ72-mrci-remote-cybersecurity-internship.pdf?raw=1" target="_blank">🔗 View Certificate</a>
+        </div>
+
+        <div class="card">
+            <h3>RangeForce Platform</h3>
+            <p>63 moduli completati – 25 ore di training.</p>
+            <a href="https://github.com/alexps4/Portfolio/blob/main/Rangeforce.pdf?raw=1" target="_blank">🔗 View Certificate</a>
+        </div>
+
     </div>
-    <div class="cert-card">
-        <strong>RangeForce Platform</strong> – 63 moduli completati (25 ore e 10 minuti)  
-        <br>Certificato PDF: <a href="https://github.com/alexps4/Portfolio/blob/main/Rangeforce.pdf" target="_blank">Visualizza certificato</a>
+
+    <!-- PROGETTI -->
+    <h2 class="section-title">🚀 Progetti Tecnici</h2>
+    <div class="grid" id="projects">
+
+        <div class="card">
+            <h3>🔍 Brute Force Detection</h3>
+            <p>Analisi eventi Windows (4625/4624) e correlazione accessi.</p>
+            <a href="#" onclick="alert('Report disponibile a breve')">🔗 Coming Soon</a>
+        </div>
+
+        <div class="card">
+            <h3>📧 Phishing Analysis</h3>
+            <p>Analisi email, IOC extraction e verifica reputazione.</p>
+            <a href="#" onclick="alert('Report disponibile a breve')">🔗 Coming Soon</a>
+        </div>
+
+        <div class="card">
+            <h3>🕵️ Threat Hunting</h3>
+            <p>Analisi Sysmon per rilevare attività sospette.</p>
+            <a href="#" onclick="alert('Report disponibile a breve')">🔗 Coming Soon</a>
+        </div>
+
+        <div class="card">
+            <h3>📊 SIEM Investigation</h3>
+            <p>Query Splunk e correlazione eventi IDS.</p>
+            <a href="#" onclick="alert('Report disponibile a breve')">🔗 Coming Soon</a>
+        </div>
+
     </div>
-    <div class="cert-card">
-        <strong>TIROCINIO IN SICUREZZA INFORMATICA REMOTA MRCI - MCSI MOSSÉ CYBER SECURITY INSTITUTE</strong>  
-        <br>Dettagli: <a href="https://students.mosse-institute.com/student/I7IjehUwZAcMz7JJhs0ZURMiRQ72" target="_blank">Visualizza certificato</a>
-    </div>
-    <div class="cert-card">
-        <strong>Badge Cisco:</strong>
+
+    <!-- SOC LAB -->
+    <h2 class="section-title">🧪 SOC Lab</h2>
+    <div class="lab">
+        <p>Ambiente virtuale con simulazioni reali di attacco e difesa:</p>
         <ul>
-            <li><a href="https://www.credly.com/badges/78b2e896-812d-44a1-ac80-b45cf179d3e3" target="_blank">CYBER THREAT MANAGEMENT</a></li>
-            <li><a href="https://www.credly.com/badges/bc7ec4f1-9ce9-4fe2-ad5c-ad76aaadb784" target="_blank">INTRODUCTION TO INTERNET OF THINGS</a></li>
-            <li><a href="https://www.credly.com/earner/earned/badge/d7fb63a9-d085-48d8-93e5-76b18edac357" target="_blank">NETWORKING BASICS</a></li>
-            <li><a href="https://www.credly.com/badges/4046eb59-61b9-442a-bb65-7f6b4179322c" target="_blank">NETWORKING DEVICES AND INITIAL CONFIGURATION</a></li>
+            <li>Kali Linux (attaccante)</li>
+            <li>Windows 10/11 (target)</li>
+            <li>Sysmon configurato</li>
+            <li>Analisi log e rilevamento minacce</li>
         </ul>
     </div>
-</section>
 
-<section id="progressi">
-    <h2>Progressi RangeForce</h2>
-    <div class="progress-bar"><div class="progress" style="width:100%">63 moduli completati (100%)</div></div>
-    <div class="progress-bar"><div class="progress" style="width:40%">Threat Hunting (40%)</div></div>
-    <div class="progress-bar"><div class="progress" style="width:50%">Malware Analysis (50%)</div></div>
-    <div class="progress-bar"><div class="progress" style="width:60%">Incident Response (60%)</div></div>
-</section>
-
-<section id="competenze">
-    <h2>Competenze principali</h2>
-    <div class="skills">
-        <div class="skill skill-red" title="Esperienza pratica con Red Teaming">Red Teaming</div>
-        <div class="skill skill-blue" title="Esperienza pratica in Penetration Testing">Penetration Testing</div>
-        <div class="skill skill-green" title="Threat Hunting su reti e sistemi">Threat Hunting</div>
-        <div class="skill skill-red" title="Analisi malware con strumenti professionali">Malware Analysis</div>
-        <div class="skill skill-purple" title="Incident Response su sistemi e reti">Incident Response</div>
-        <div class="skill skill-blue" title="Uso di Metasploit">Metasploit</div>
-        <div class="skill skill-green" title="Analisi malware con YARA">YARA</div>
-        <div class="skill skill-purple" title="Programmazione in Python">Python</div>
-        <div class="skill skill-blue" title="Reverse engineering con Ghidra / Cutter">Ghidra / Cutter</div>
-        <div class="skill skill-green" title="Sicurezza Cloud">Cloud Security</div>
+    <!-- ESPERIENZA -->
+    <h2 class="section-title">🧪 Esperienza Pratica</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Mossé Cyber Security Institute (Tirocinio Remoto)</h3>
+            <p>Incident response, analisi log e threat hunting.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>RangeForce Platform</h3>
+            <p>63 moduli completati con simulazioni SOC reali.</p>
+        </div>
     </div>
-</section>
 
-<section id="contatti">
-    <h2>Contatti</h2>
-    <p>Email: <strong><a href="mailto:alexjuve2930@gmail.com">alexjuve2930@gmail.com</a></strong></p>
-    <p>Cellulare: <strong>3291989053</strong></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/alessio-giordano-060064247/" target="_blank">alessio-giordano</a></p>
-    <p>YouTube: <a href="https://www.youtube.com/channel/UCvQjOX6gJFbibRtuW8nW4zQ" target="_blank">THE NEXT LEVEL / ALEXJ30</a></p>
-</section>
+    <!-- COMPETENZE -->
+    <h2 class="section-title">🛠️ Competenze</h2>
+    <p>
+        <span class="badge">SIEM</span>
+        <span class="badge">Threat Hunting</span>
+        <span class="badge">Incident Response</span>
+        <span class="badge">Sysmon</span>
+        <span class="badge">Wireshark</span>
+        <span class="badge">Nmap</span>
+        <span class="badge">YARA</span>
+        <span class="badge">Metasploit</span>
+    </p>
+
+    <!-- CONTATTI -->
+    <h2 class="section-title">📧 Contatti</h2>
+    <p>
+        Email: alexjuve2930@gmail.com<br>
+        LinkedIn: <a href="https://www.linkedin.com/in/alessio-giordano-060064247" target="_blank" style="color:#22c55e;">linkedin.com/in/alessio-giordano-060064247</a>
+    </p>
+
+</div>
 
 <footer>
-    &copy; 2025 Alessio Giordano – Tutti i diritti riservati  
-    <br>
-    <a href="https://www.linkedin.com/in/alessio-giordano-060064247/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:alexjuve2930@gmail.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.youtube.com/channel/UCvQjOX6gJFbibRtuW8nW4zQ" target="_blank"><i class="fab fa-youtube"></i></a>
+    © 2026 Alessio Giordano | SOC Analyst
 </footer>
 
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const bars = document.querySelectorAll('.progress');
-        bars.forEach(bar => {
-            const width = bar.style.width;
-            bar.style.width = '0';
-            setTimeout(() => { bar.style.width = width; }, 300);
-        });
-    });
-</script>
-
-</main>
 </body>
 </html>
